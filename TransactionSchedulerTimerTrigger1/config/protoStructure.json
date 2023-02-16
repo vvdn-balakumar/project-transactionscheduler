@@ -1,0 +1,1946 @@
+{
+	"FrameFormat": {
+		"Rev": {
+			"Length": "2",
+			"Type": "int"
+		},
+		"Count": {
+			"Length": "2",
+			"Type": "int"
+		},
+		"MessageID": {
+			"Length": "1",
+			"Type": "int"
+		},
+		"CountryCode": {
+			"Length": "1",
+			"Type": "int"
+		},
+		"RegionCode": {
+			"Length": "2",
+			"Type": "int"
+		},
+		"CellID": {
+			"Length": "2",
+			"Type": "int"
+		},
+		"MeterID": {
+			"Length": "2",
+			"Type": "int"
+		},
+		"Action": {
+			"Length": "1",
+			"Type": "int"
+		},
+		"Attribute": {
+			"Length": "1",
+			"Type": "int"
+		},
+		"Data": {},
+		"CRC":{"Length": "2"}
+	},
+	"Actions": {
+		"COLLECTOR_REGISTERATION": "01",
+		"METER_REGISTERATION": "02",
+		"COLLECTOR_DATA_UPLOAD": "03",
+		"ACTION_FOR_DEVICE": "04",
+		"EVENTS_ALARM_DATA": "05"
+	},
+	"ActionAttribute": {
+		"COLLECTOR_REGISTERATION": {
+			"REGISTRATION_PARA": "01",
+			"DEVICE_DETAILS": "02",
+			"HS_CONFIGURATION": "03",
+			"SUCCESS": "04"
+		},
+		"COLLECTOR_DATA_UPLOAD": {
+			"ON_DEMAND_HS_DATA": "01",
+			"ON_DEMAND_METER_DATA": "02",
+			"COMBINED_TRANSACTIONAL_DATA": "03"
+		},
+		"METER_REGISTERATION": {
+			"REGISTRATION_PARA": "01",
+			"DEVICE_DETAILS": "02",
+			"METER_CONFIGURATION": "03",
+			"SUCCESS": "04"
+		},
+		"ACTION_FOR_DEVICE": {
+			"METER_CONNECT": "01",
+			"METER__DISCONNECT": "02"
+		},
+		"EVENTS_ALARM_DATA": {
+			"ALL_ALARMS": "01"
+		}
+	},
+	"COLLECTOR_REGISTERATION": {
+		"REGISTRATION_PARA": {
+			"SERIAL_NO": {
+				"Type": "string",
+				"Length": "25"
+			},
+			"MACID": {
+				"Type": "mchar",
+				"Length": "6"
+			},
+			"DEVICEID": {
+				"Type": "string",
+				"Length": "28"
+			}
+		},
+		"DEVICE_DETAILS": {
+			"Latitude": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"Longitude": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"SERIAL_NO": {
+				"Type": "string",
+				"Length": "25"
+			},
+			"Circuit_ID": {
+				"Type": "char",
+				"Length": "1"
+			},
+			"CT_Ratio": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"PT_Ratio": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"CT_CalibrationData": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"PT_CalibrationData": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"HSID": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"TransformerRating": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"TransformerType": {
+				"Type": "char",
+				"Length": "1"
+			},
+			"RatedVoltage": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"Phase": {
+				"Type": "char",
+				"Length": "1"
+			},
+			"Frequency": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"CertificationNumber": {
+				"Type": "char",
+				"Length": "1"
+			},
+			"UtilityID": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ApplicableStandard": {
+				"Type": "char",
+				"Length": "1"
+			},
+			"TransformerClass": {
+				"Type": "char",
+				"Length": "1"
+			},
+			"MAC_ID_GPRS": {
+				"Type": "mchar",
+				"Length": "6"
+			},
+			"MAC_ID_WiFi": {
+				"Type": "mchar",
+				"Length": "6"
+			},
+			"IP_address_WiFi": {
+				"Type": "char",
+				"Length": "4"
+			},
+			"SimCardNumber": {
+				"Type": "string",
+				"Length": "10"
+			},
+			"ESN": {
+				"Type": "string",
+				"Length": "10"
+			},
+			"CountryCode": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"RegionCode": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"SSID_Name": {
+				"Type": "string",
+				"Length": "6"
+			},
+			"AccessPointPassword": {
+				"Type": "string",
+				"Length": "6"
+			}
+		},
+		"HS_CONFIGURATION": {
+			"Energy": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"Demand": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"DemandIntervalLength": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"NumberofSubIntervals": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ColdLoadPickupTimes": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"PowerOutageRecognitionTime": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"TestModeDemandIntervalLength": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"NumberofTestModeSubintervals": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"TimetoRemainInTestMode(mins)": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"DailySelfRead": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"DailySelfReadTime": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"Quantity1": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"Quantity2": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"Quantity3": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"Quantity4": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"LoadProfileIntervalLength": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"OutageLength(Sec)": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"Pulseweight1": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"Pulseweight2": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"Pulseweight3": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"Pulseweight4": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"AllEvents": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"BillingDateCleard": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"BillingScheduleExpiration": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"DemandRestOccured": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"HistoryLogCleared": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"Configuration Error Detected": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"LoadProfileError": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"LowBatteryDetected": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"PrimaryPowerDown": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"CTMultipliers": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"VTMultipliers": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"RegisterMultipliers": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"EnableVoltageMonitor": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"PhaseSelection": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"VoltageMointorIntervalLength": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"RMSVoltLoadThreshold(V)": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"RMSVoltHighThreshold(V)": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"LowVoltageThreshold": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"LowVoltageThresholdDeviation/Interval": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"HighVoltageThresholdDeviation/Interval": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"LinkFailure": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"LinkMetric": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"InterrogationSendSucceeded": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"SendResponseFailed": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"DeregistrationResult": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ReceivedMessageFrom": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"DataVineHyperSproutChange": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"DataVineSyncFatherChange": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ZigbeeSETunnelingMessage": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ZigbeeSimpleMeteringMessage": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"TableSendRequestFailed": {
+				"Type": "int",
+				"Length": "1"
+			}
+		}
+	},
+	"METER_REGISTERATION": {
+		"REGISTRATION_PARA": {
+			"SERIAL_NO": {
+				"Type": "string",
+				"Length": "25"
+			},
+			"MACID": {
+				"Type": "mchar",
+				"Length": "6"
+			}
+		},
+		"DEVICE_DETAILS": {
+			"Latitude": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"Longitude": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"SERIAL_NO": {
+				"Type": "string",
+				"Length": "25"
+			},
+			"Circuit_ID": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"CT_Ratio": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"PT_Ratio": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"CT_CalibrationData": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"PT_CalibrationData": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"MeterID": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"MeterType": {
+				"Type": "char",
+				"Length": "1"
+			},
+			"RatedVoltage": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"Phase": {
+				"Type": "char",
+				"Length": "1"
+			},
+			"CertificationNumber": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"UtilityID": {
+				"Type": "char",
+				"Length": "1"
+			},
+			"ApplicableStandard": {
+				"Type": "char",
+				"Length": "1"
+			},
+			"MeterClass": {
+				"Type": "char",
+				"Length": "1"
+			},
+			"MAC_ID_WiFi": {
+				"Type": "mchar",
+				"Length": "6"
+			},
+			"IP_address_WiFi": {
+				"Type": "char",
+				"Length": "4"
+			},
+			"ESN": {
+				"Type": "string",
+				"Length": "10"
+			},
+			"CountryCode": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"RegionCode": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"SSID_Name": {
+				"Type": "string",
+				"Length": "6"
+			},
+			"AccessPointPassword": {
+				"Type": "string",
+				"Length": "6"
+			}
+		},
+		"METER_CONFIGURATION": {
+			"Energy1": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"Energy2": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"Energy3": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"Energy4": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"Demand": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"LoadControlDisconnectThreshold": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ReconnectMethod": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"DemandIntervalLength": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"NumberofSubIntervals": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ColdLoadPickupTimes": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"PowerOutageRecognitionTime": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"TestModeDemandIntervalLength ": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"NumberofTestModeSubintervals ": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"TimetoremaininTestMode": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"DailySelfRead": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"DailySelfReadTime": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"Quantity1": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"Quantity2": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"Quantity3": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"Quantity4": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"LoadProfileIntervalLength": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"OutageLength(Sec)": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"Pulseweight1": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"Pulseweight2": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"Pulseweight3": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"Pulseweight4": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"EnableVoltage Monitor": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"PhaseSelection": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"VoltageMointorIntervalLength": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"RMSVoltLoadThreshold(V)": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"RMSVoltHighThreshold(V)": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"LowVoltageThreshold": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"LowVoltageThresholdDeviation/Interval": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"HighVoltageThresholdDeviation/Interval": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"AllEvents": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"BillingDateCleard": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"BillingScheduleExpiration": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"DemandRestOccured": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"HistoryLogCleared": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ConfigurationErrorDetected": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"LoadProfileError": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"LowBatteryDetected": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"PrimaryPowerDown": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"CTMultipliers": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"VTMultipliers": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"RegisterMultipliers": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"Lockout:Loginattempts,optical": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"Lockout:Logoutminutes,optical": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"Lockout:Loginattempts,lan": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"Lockout:Logoutminutes,lan": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"ConsecutiveLAN": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"LanLinkMetric(quality)periodinseconds": {
+				"Type": "int",
+				"Length": "2"
+			}
+		}
+	},
+	"ACTION_FOR_DEVICE": {
+		"STATUSCODE": {
+			"Type": "int",
+			"Length": "1"
+		}
+	},
+	"COLLECTOR_DATA_UPLOAD": {
+		"COMBINED_TRANSACTIONAL_DATA": {
+			"NoOfMeter": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"StatusTransformer": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"DeviceID": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"StatusMeter": {
+				"Type": "int",
+				"Length": "1"
+			}
+		},
+		"COMBINED_TRANSACTIONAL_DATA_COMMONPARAMETERS": {
+			"ActiveReceivedCumulativeRate1": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ActiveReceivedCumulativeRate2": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ActiveReceivedCumulativeRate3": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ActiveReceivedCumulativeRate4": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ActiveReceivedCumulativeRate_Total": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ActiveDeliveredCumulativeRate1": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ActiveDeliveredCumulativeRate2": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ActiveDeliveredCumulativeRate3": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ActiveDeliveredCumulativeRate4": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ActiveDeliveredCumulativeRate_Total": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ActiveCumulativeRate_Total": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ReactiveReceivedCumulativeRate1": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ReactiveReceivedCumulativeRate2": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ReactiveReceivedCumulativeRate3": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ReactiveReceivedCumulativeRate4": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ReactiveReceivedCumulativeTotal": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ReactiveDeliveredCumulativeRate1": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ReactiveDeliveredCumulativeRate2": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ReactiveDeliveredCumulativeRate3": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ReactiveDeliveredCumulativeRate4": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ReactiveDeliveredCumulativeTotal": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"Reactive_m_Total": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ApparentReceivedCumulativeRate_1": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ApparentReceivedCumulativeRate_2": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ApparentReceivedCumulativeRate_3": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ApparentReceivedCumulativeRate_4": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ApparentReceivedCumulativeRate_Total": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ApparentDeliveredCumulativeRate_1": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ApparentDeliveredCumulativeRate_2": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ApparentDeliveredCumulativeRate_3": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ApparentDeliveredCumulativeRate_4": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ApparentDeliveredCumulativeRate_Total": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"Apparent_m_Total": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ActiveMaxdemandMonthlyPeak1": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ActiveMaxdemandMonthlyPeak2": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ActiveMaxdemandMonthlyPeak3": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ActiveMaxdemandMonthlyPeak4": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ActiveMaxdemandMonthlyPeak": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ActiveMaxdemandMonthlyPeak1Date": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ActiveMaxdemandMonthlyPeak1Month": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ActiveMaxdemandMonthlyPeak1Year": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"ActiveMaxdemandMonthlyPeak1Hour": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ActiveMaxdemandMonthlyPeak1Min": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ActiveMaxdemandMonthlyPeak1Sec": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ActiveMaxdemandMonthlyPeak2Date": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ActiveMaxdemandMonthlyPeak2Month": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ActiveMaxdemandMonthlyPeak2Year": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"ActiveMaxdemandMonthlyPeak2Hour": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ActiveMaxdemandMonthlyPeak2Min": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ActiveMaxdemandMonthlyPeak2Sec": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ActiveMaxdemandMonthlyPeak3Date": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ActiveMaxdemandMonthlyPeak3Month": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ActiveMaxdemandMonthlyPeak3Year": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"ActiveMaxdemandMonthlyPeak3Hour": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ActiveMaxdemandMonthlyPeak3Min": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ActiveMaxdemandMonthlyPeak3Sec": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ActiveMaxdemandMonthlyPeak4Date": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ActiveMaxdemandMonthlyPeak4Month": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ActiveMaxdemandMonthlyPeak4Year": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"ActiveMaxdemandMonthlyPeak4Hour": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ActiveMaxdemandMonthlyPeak4Min": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ActiveMaxdemandMonthlyPeak4Sec": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ActiveMaxdemandMonthlyPeakDate": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ActiveMaxdemandMonthlyPeakMonth": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ActiveMaxdemandMonthlyPeakYear": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"ActiveMaxdemandMonthlyPeakHour": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ActiveMaxdemandMonthlyPeakMin": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ActiveMaxdemandMonthlyPeakSec": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ReactiveMaxdemandMonthlyPeak1": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ReactiveMaxdemandMonthlyPeak2": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ReactiveMaxdemandMonthlyPeak3": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ReactiveMaxdemandMonthlyPeak4": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ReactiveMaxdemandMonthlyPeak": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ReactiveMaxdemandMonthlyPeak1Date": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ReactiveMaxdemandMonthlyPeak1Month": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ReactiveMaxdemandMonthlyPeak1Year": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"ReactiveMaxdemandMonthlyPeak1Hour": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ReactiveMaxdemandMonthlyPeak1Min": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ReactiveMaxdemandMonthlyPeak1Sec": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ReactiveMaxdemandMonthlyPeak2Date": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ReactiveMaxdemandMonthlyPeak2Month": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ReactiveMaxdemandMonthlyPeak2Year": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"ReactiveMaxdemandMonthlyPeak2Hour": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ReactiveMaxdemandMonthlyPeak2Min": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ReactiveMaxdemandMonthlyPeak2Sec": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ReactiveMaxdemandMonthlyPeak3Date": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ReactiveMaxdemandMonthlyPeak3Month": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ReactiveMaxdemandMonthlyPeak3Year": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"ReactiveMaxdemandMonthlyPeak3Hour": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ReactiveMaxdemandMonthlyPeak3Min": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ReactiveMaxdemandMonthlyPeak3Sec": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ReactiveMaxdemandMonthlyPeak4Date": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ReactiveMaxdemandMonthlyPeak4Month": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ReactiveMaxdemandMonthlyPeak4Year": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"ReactiveMaxdemandMonthlyPeak4Hour": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ReactiveMaxdemandMonthlyPeak4Min": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ReactiveMaxdemandMonthlyPeak4Sec": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ReactiveMaxdemandMonthlyPeakDate": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ReactiveMaxdemandMonthlyPeakMonth": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ReactiveMaxdemandMonthlyPeakYear": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"ReactiveMaxdemandMonthlyPeakHour": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ReactiveMaxdemandMonthlyPeakMin": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ReactiveMaxdemandMonthlyPeakSec": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ApparentMaxdemandMonthlyPeak1": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ApparentMaxdemandMonthlyPeak2": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ApparentMaxdemandMonthlyPeak3": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ApparentMaxdemandMonthlyPeak4": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ApparentMaxdemandMonthlyPeak": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ApparentMaxdemandMonthlyPeak1Date": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ApparentMaxdemandMonthlyPeak1Month": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ApparentMaxdemandMonthlyPeak1Year": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"ApparentMaxdemandMonthlyPeak1Hour": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ApparentMaxdemandMonthlyPeak1Min": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ApparentMaxdemandMonthlyPeak1Sec": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ApparentMaxdemandMonthlyPeak2Date": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ApparentMaxdemandMonthlyPeak2Month": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ApparentMaxdemandMonthlyPeak2Year": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"ApparentMaxdemandMonthlyPeak2Hour": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ApparentMaxdemandMonthlyPeak2Min": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ApparentMaxdemandMonthlyPeak2Sec": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ApparentMaxdemandMonthlyPeak3Date": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ApparentMaxdemandMonthlyPeak3Month": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ApparentMaxdemandMonthlyPeak3Year": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"ApparentMaxdemandMonthlyPeak3Hour": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ApparentMaxdemandMonthlyPeak3Min": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ApparentMaxdemandMonthlyPeak3Sec": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ApparentMaxdemandMonthlyPeak4Date": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ApparentMaxdemandMonthlyPeak4Month": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ApparentMaxdemandMonthlyPeak4Year": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"ApparentMaxdemandMonthlyPeak4Hour": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ApparentMaxdemandMonthlyPeak4Min": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ApparentMaxdemandMonthlyPeak4Sec": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ApparentMaxdemandMonthlyPeakDate": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ApparentMaxdemandMonthlyPeakMonth": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ApparentMaxdemandMonthlyPeakYear": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"ApparentMaxdemandMonthlyPeakHour": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ApparentMaxdemandMonthlyPeakMin": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ApparentMaxdemandMonthlyPeakSec": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"ReadTimestamp": {
+				"Type": "timestamp",
+				"Length": "19"
+			}
+		},
+		"COMBINED_TRANSACTIONAL_DATA_1PHASE_Transformer": {
+			"Line1Voltage": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"Line1Current": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"Line1Period": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"Line1PhaseAngle": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"THD": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"ThirdHarm": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"FifthHarm": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"SeventhHarm": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"NinthHarm": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"EleventhHarm": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"ThirteenthHarm": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"FifteenthHarm": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"AmbientTemperarture": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"TopTemperature": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"BottomTemperature": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"TransformerOilLevel": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"BatteryVoltage": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"BatteryStatus": {
+				"Type": "int",
+				"Length": "4"
+			}
+		},
+		"COMBINED_TRANSACTIONAL_DATA_3PHASE_Transformer": {
+			"Line1Voltage": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"Line2Voltage": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"Line3Voltage": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"Line1Current": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"Line2Current": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"Line3Current": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"LineNCurrent": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"Line1Period": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"Line2Period": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"Line3Period": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"Line1PhaseAngle": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"Line2PhaseAngle": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"Line3PhaseAngle": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"THD_1": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"ThirdHarm_1": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"FifthHarm_1": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"SeventhHarm_1": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"NinthHarm_1": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"EleventhHarm_1": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"ThirteenthHarm_1": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"FifteenthHarm_1": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"THD_2": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"ThirdHarm_2": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"FifthHarm_2": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"SeventhHarm_2": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"NinthHarm_2": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"EleventhHarm_2": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"ThirteenthHarm_2": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"FifteenthHarm_2": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"THD_3": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"ThirdHarm_3": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"FifthHarm_3": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"SeventhHarm_3": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"NinthHarm_3": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"EleventhHarm_3": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"ThirteenthHarm_3": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"FifteenthHarm_3": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"AmbientTemperarture": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"TopTemperature": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"BottomTemperature": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"TransformerOilLevel": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"BatteryVoltage": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"BatteryStatus": {
+				"Type": "int",
+				"Length": "4"
+			}
+		},
+		"COMBINED_TRANSACTIONAL_DATA_1PHASE_Meter": {
+			"Line1InstVoltage": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"Line1InstCurrent": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"Line1Frequency": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"Line1PowerFactor": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"ImportedActiveEnergyRate3_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedActiveEnergyRate4_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"TotImportedActiveMaxDemand_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedActiveMaxDemandRate1_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedActiveMaxDemandRate2_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedActiveMaxDemandRate3_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedActiveMaxDemandRate4_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"TotImportedActiveMaxDemandRate_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedActiveCumMaxDemandRate1_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedActiveCumMaxDemandRate2_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedActiveCumMaxDemandRate3_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedActiveCumMaxDemandRate4_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"TotImportedActiveCumMaxDemandRate_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedReactiveEnergyRate1_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedReactiveEnergyRate2_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedReactiveEnergyRate3_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedReactiveEnergyRate4_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"TotImportedReactiveEnergyRate_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedReactiveMaxDemandRate1_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedReactiveMaxDemandRate2_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedReactiveMaxDemandRate3_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedReactiveMaxDemandRate4_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"TotImportedReactiveMaxDemandRate_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedReactiveCumMaxDemandRate1_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedReactiveCumMaxDemandRate2_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedReactiveCumMaxDemandRate3_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedReactiveCumMaxDemandRate4_LBP": {
+				"Type": "int",
+				"Length": "4"
+			}
+		},
+		"COMBINED_TRANSACTIONAL_DATA_3PHASE_Meter": {
+			"Line1InstVoltage": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"Line2InstVoltage": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"Line3InstVoltage": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"Line1InstCurrent": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"Line2InstCurrent": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"Line3InstCurrent": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"Line0InstCurrent": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"Line1Frequency": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"Line2Frequency": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"Line3Frequency": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"Line1PowerFactor": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"Line2PowerFactor": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"Line3PowerFactor": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"SystemPowerFactor": {
+				"Type": "float",
+				"Length": "4"
+			},
+			"ImportedActiveEnergyRate3_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedActiveEnergyRate4_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"TotImportedActiveMaxDemand_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedActiveMaxDemandRate1_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedActiveMaxDemandRate2_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedActiveMaxDemandRate3_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedActiveMaxDemandRate4_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"TotImportedActiveMaxDemandRate_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedActiveCumMaxDemandRate1_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedActiveCumMaxDemandRate2_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedActiveCumMaxDemandRate3_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedActiveCumMaxDemandRate4_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"TotImportedActiveCumMaxDemandRate_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedReactiveEnergyRate1_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedReactiveEnergyRate2_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedReactiveEnergyRate3_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedReactiveEnergyRate4_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"TotImportedReactiveEnergyRate_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedReactiveMaxDemandRate1_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedReactiveMaxDemandRate2_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedReactiveMaxDemandRate3_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedReactiveMaxDemandRate4_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"TotImportedReactiveMaxDemandRate_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedReactiveCumMaxDemandRate1_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedReactiveCumMaxDemandRate2_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedReactiveCumMaxDemandRate3_LBP": {
+				"Type": "int",
+				"Length": "4"
+			},
+			"ImportedReactiveCumMaxDemandRate4_LBP": {
+				"Type": "int",
+				"Length": "4"
+			}
+		}
+	},
+	"EVENTS_ALARM_DATA": {
+		"ALL_ALARMS": {
+			"NoOfMeter": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"StatusTransformer": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"DeviceID": {
+				"Type": "int",
+				"Length": "2"
+			},
+			"StatusMeter": {
+				"Type": "int",
+				"Length": "1"
+			},
+			"AlarmEventLength": {
+				"Type": "int",
+				"Length": "8"
+			}
+		},
+		"ALL_ALARMS_TRANSFORMER": {
+			"OverVoltage": "",
+			"UnderVoltage": "",
+			"OverLoadLine1(MD Alarm)": "",
+			"OverLoadLine2(MD Alarm)": "",
+			"OverLoadLine3(MD Alarm)": "",
+			"OverFrequency": "",
+			"UnderFrequency": "",
+			"PowerFailure": "",
+			"CTOpen": "",
+			"PTOpen": "",
+			"OilLevelSensorFailure": "",
+			"TamperLid": "",
+			"TamperBox": "",
+			"LowOilLevel": "",
+			"HighOilTemperature": "",
+			"LowBatteryVoltage": "",
+			"BatteryFailure": "",
+			"BatteryRemoved": "",
+			"PrimaryPowerUp": "",
+			"PrimaryPowerDown": "",
+			"Non-TechnicalLoss": "",
+			"MeterConnected": "",
+			"MeterDisconnected": "",
+			"Wi-FiCommunicationLoss": "",
+			"3G/4G/LTECommunicationLoss": "",
+			"Communicationattemptsexceeded": "",
+			"UnAuthenticatedConnectionRequest": ""
+		},
+		"ALL_ALARMS_METER": {
+			"VoltageSagLine1": "",
+			"VoltageSagLine2": "",
+			"VoltageSagLine3": "",
+			"VoltageSwellLine1": "",
+			"VoltageSwellLine2": "",
+			"VoltageSwellLine3": "",
+			"VoltageUnbalance": "",
+			"VoltageCablelossLine1": "",
+			"VoltageCablelossLine2": "",
+			"VoltageCablelossLine3": "",
+			"VoltageTHDOverLimitLine1": "",
+			"VoltageTHDOverLimitLine2": "",
+			"VoltageTHDOverLimitLine3": "",
+			"CurrentTHDOverLimitLine1": "",
+			"CurrentTHDOverLimitLine2": "",
+			"CurrentTHDOverLimitLine3": "",
+			"PrimaryPowerUp": "",
+			"PrimaryPowerDown": "",
+			"LongOutagedetection": "",
+			"ShortOutagedetection": "",
+			"NonvolatileMemoryFailed": "",
+			"Clockerrordetected": "",
+			"LowBatteryVoltage": "",
+			"FlashMemoryFailed": "",
+			"Firmwareupgraded": "",
+			"Demandreset": "",
+			"TimeSynchronized": "",
+			"Historylogcleared": "",
+			"Coverremoval": "",
+			"Terminalcoverremoval": "",
+			"MeterDisconnected": "",
+			"MeterConnected": "",
+			"Demandresponseofimportactpwr(kW+)": "",
+			"Demandresponseofexportactpwr(kW-)": "",
+			"Demandresponseofimportreactpwr(kVar+)": "",
+			"Demandresponseofexportreactpwr(kVar-)": ""
+		},
+		"ALL_ALARMS_Timestamp": {
+			"Type": "timestamp",
+			"Length": "19"
+		}
+	}
+}
