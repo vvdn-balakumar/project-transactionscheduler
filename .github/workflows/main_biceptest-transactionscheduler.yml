@@ -41,4 +41,4 @@ jobs:
           app-name: 'biceptest-transactionscheduler'
           slot-name: 'Production'
           package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CCB6140FB18842F38A40FB6DF94FE9AF }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5FAB6B90057D4FD989E5DA99066647F4 }}
