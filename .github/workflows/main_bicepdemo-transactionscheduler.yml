@@ -41,4 +41,4 @@ jobs:
           app-name: 'bicepdemo-transactionscheduler'
           slot-name: 'Production'
           package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AC2FC178E5CF4535B6F34D6D86A5418C }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4611C5AE2D0846C5ACBF042B02D1802B }}
