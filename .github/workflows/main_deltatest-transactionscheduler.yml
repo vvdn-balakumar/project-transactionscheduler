@@ -41,4 +41,4 @@ jobs:
           app-name: 'deltatest-transactionscheduler'
           slot-name: 'Production'
           package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_637BB99EE7024D9E82B2A43C6B219370 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9CD2515F36844EDE8C7A4F0E2C749A2E }}
